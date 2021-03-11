@@ -13,7 +13,7 @@ function getTime() {
 }
 
 var currentHour = Date.now();
-$('.hour').each(function(){
+$('.blockInput').each(function(){
     var val = parseInt($(this).prop('id'));
     if(val > currentHour && val < currentHour+6){
         $(this).css('background-color','green');
