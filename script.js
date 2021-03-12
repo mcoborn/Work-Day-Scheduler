@@ -1,4 +1,4 @@
-var currentDay = $("dayDispay");
+var currentDay = $("dayDisplay");
 var currentTime = getTime();
 
 function displayTime() {
@@ -26,8 +26,6 @@ $('.blockInput').each(function(){
     }
 });
 
-$(document).ready(function() {
-    $(."saveBtn").on("click", function() {
-        var 
-    })
-})
+// $(."saveBtn").on("click", function() {
+  //     var
+  // })
