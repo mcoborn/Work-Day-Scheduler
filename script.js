@@ -18,10 +18,16 @@ $('.blockInput').each(function(){
     if(val > currentHour && val < currentHour+6){
         $(this).css('background-color','green');
     }else if(val < currentHour && val > currentHour-6){
-        $(this).css('background-color','Grey');
+        $(this).css('background-color','grey');
     }else if(val === currentHour){
-        $(this).css('background-color','Red');
+        $(this).css('background-color','red');
     }else{
-        $(this).css('background-color','White');
+        $(this).css('background-color','white');
     }
 });
+
+$(document).ready(function() {
+    $(."saveBtn").on("click", function() {
+        var 
+    })
+})
