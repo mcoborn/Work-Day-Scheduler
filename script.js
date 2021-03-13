@@ -14,7 +14,7 @@ function getTime() {
 var currentHour = new Date().getHours();
 $('.blockInput').each(function(){
     var val = parseInt($(this).prev().attr('id'));
-    if(val > currentHour && val < currentHour+6){
+    if(val > currentHour && val < currentHour+8){
         $(this).css('background-color','green');
     }else if(val < currentHour && val > currentHour-6){
         $(this).css('background-color','grey');
@@ -27,11 +27,9 @@ $('.blockInput').each(function(){
 
 $(".saveBtn").on("click", function(event) {
     event.preventDefault()
-        function saveBtn() {
             var myContent = document.getElementById("textArea").value;
             localStorage.setItem("myContent", myContent);
-        };
-          document.getElementById("textArea").value = myContent;
+    document.getElementById("textArea").value = myContent;
 })
 
 });
