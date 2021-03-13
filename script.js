@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 var currentDay = $("#dayDisplay");
 var currentTime = getTime();
 
