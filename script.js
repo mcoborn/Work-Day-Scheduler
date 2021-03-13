@@ -1,20 +1,18 @@
-var currentDay = $("dayDisplay");
+$(document).ready(function() {
+var currentDay = $("#dayDisplay");
 var currentTime = getTime();
 
 function displayTime() {
-    $(document).ready(function() {
-        $("#dayDisplay").text(moment().format("ddd MMM Do, YYYY"));
-    });
+    $("#dayDisplay").text(moment().format("ddd MMM Do, YYYY"));
 }
-
 setInterval(displayTime, 1000);
 function getTime() {
     return moment().hour()
 }
 
-var currentHour = Date.now();
+var currentHour = new Date().getHours();
 $('.blockInput').each(function(){
-    var val = parseInt($(this).prop('id'));
+    var val = parseInt($(this).prev().attr('id'));
     if(val > currentHour && val < currentHour+6){
         $(this).css('background-color','green');
     }else if(val < currentHour && val > currentHour-6){
@@ -26,6 +24,13 @@ $('.blockInput').each(function(){
     }
 });
 
-// $(."saveBtn").on("click", function() {
-  //     var
-  // })
+$(".saveBtn").on("click", function(event) {
+    event.preventDefault()
+        function saveBtn() {
+            var myContent = document.getElementById("textArea").value;
+            localStorage.setItem("myContent", myContent);
+        };
+          document.getElementById("textArea").value = myContent;
+})
+
+});
