@@ -27,7 +27,7 @@ $('.blockInput').each(function(){
 
 $(".saveBtn").on("click", function(event) {
     event.preventDefault()
-            var myContent = document.getElementById("textArea").value;
+            var myContent = document.getElementById(prev().attr('id')).value;
             localStorage.setItem("myContent", myContent);
     document.getElementById("textArea").value = myContent;
 })
