@@ -45,7 +45,7 @@ function getAllTasks() {
     if (tasks.length > 0) {
         for (var i = 0; i < tasks.length;
             i++) {
-                var hourSibling = $(`$#{tasks[i].hour}`);
+                var hourSibling = $(`#${tasks[i].hour}`);
                     console.log(hourSibling);
                 hourSibling.next().val(tasks[i].text);
             }
